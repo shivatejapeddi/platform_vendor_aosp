@@ -53,6 +53,7 @@ PRODUCT_MAKEFILES += \
 COMMON_LUNCH_CHOICES += \
     pa_A6020-userdebug \
     pa_beryllium-userdebug \
+    pa_beryllium-user \
     pa_cepheus-userdebug \
     pa_chiron-userdebug \
     pa_davinci-userdebug \
