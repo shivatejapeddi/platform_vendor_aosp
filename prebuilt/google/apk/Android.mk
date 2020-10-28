@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Project 404
+# Copyright (C) 2017 Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,4 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SDCLANG_LTO_DEFS := vendor/aosp/sdclang/sdllvm-lto-defs.mk
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Flipendo
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := Flipendo.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_CLASS := APPS
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+include $(BUILD_PREBUILT)

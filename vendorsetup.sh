@@ -5,3 +5,7 @@ do
         lunch_others_targets+=("aosp_$device-$var")
     done
 done
+
+# SDClang Environment Variables
+export SDCLANG_CONFIG=$(pwd)/vendor/aosp/sdclang/sdclang.json
+
