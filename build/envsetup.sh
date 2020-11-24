@@ -56,3 +56,6 @@ if [ -z ${CCACHE_EXEC} ]; then
         echo "ccache not found/installed!"
     fi
 fi
+
+# SDClang Environment Variables
+export SDCLANG_CONFIG=$(pwd)/vendor/aosp/sdclang/sdclang.json
