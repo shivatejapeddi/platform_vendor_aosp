@@ -136,11 +136,7 @@ $(foreach f,$(wildcard vendor/aosp/prebuilt/common/etc/init/*.rc),\
 
 # Fix Dialer
 PRODUCT_COPY_FILES +=  \
-    vendor/aosp/prebuilt/common/etc/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml \
-    vendor/aosp/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
-
-PRODUCT_PACKAGES += \
-    Flipendo
+    vendor/aosp/prebuilt/common/etc/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
