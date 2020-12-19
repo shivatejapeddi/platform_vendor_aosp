@@ -37,20 +37,6 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay/common
 
-# SDClang
-ifneq ($(HOST_OS),linux)
-ifneq ($(sdclang_already_warned),true)
-$(warning **********************************************)
-$(warning * SDCLANG is not supported on non-linux hosts.)
-$(warning **********************************************)
-sdclang_already_warned := true
-endif
-else
-# include definitions for SDCLANG
-include vendor/aosp/sdclang/sdclang.mk
-endif
-
-
 # Exclude RRO Enforcement
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS +=  \
     vendor/aosp/overlay/common
